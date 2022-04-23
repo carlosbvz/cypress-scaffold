@@ -1,3 +1,5 @@
+// #4  Broswer helper methods
+
 class browserActions {
   static clickOnElement(el) {
     if (!el) return null; // Try to validate shit here...

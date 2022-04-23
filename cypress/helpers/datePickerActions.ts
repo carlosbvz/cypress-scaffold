@@ -1,3 +1,5 @@
+// #2 Specific DatePicker methods
+
 import pageObjects from '../pageObject/pageObjects';
 import browserActions from './browserActions';
 

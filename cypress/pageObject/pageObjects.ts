@@ -1,5 +1,5 @@
 
-/**
+/** #3
  * This is kinda lika you got in the pageObject folder, 
  * The idea here is to have a reusable way to find DOM elements... 
  * You will need to take a look at the DOM... and find a clever way to locate a DOM element.
