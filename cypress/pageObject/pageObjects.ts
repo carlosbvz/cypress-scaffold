@@ -12,9 +12,29 @@
   public static getDepartureDatePicker() {
     return cy.get(".calendarswapbtn input").eq(0);
   }
+  public static getReturnDatePicker() {
+    return cy.get(".calendarswapbtn input").eq(1);
+  }
   public static getTodayDatePicker() {
     return cy.get("a.is--today");
   }
+
+  // Here is where some "smart" logic will be implemented,
+  public static getDatePicker(daysInTheFuture = 0) { // Default value is 0
+     // Today's data
+    const date = new Date();
+     // Add days to the date
+    date.setDate(date.getDate() + daysInTheFuture);
+
+    // Get Data
+    const day = date.getDate();
+    const month = date.toLocaleString('default', { month: 'long' });
+    const year = date.getFullYear();
+
+    // Find Element
+    return cy.get(`[aria-label="${day} ${month} ${year}"]`)
+  }
+
 }
 
 export default pageObjects;
